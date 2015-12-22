@@ -1,7 +1,10 @@
 {
 	"buildDir": "dist",
 	"handlebars": {
-		"src": "src/templates/**"
+		"src": [
+			"src/templates/**/*.hbs",
+			"!src/templates/partials/**/*.hbs"
+		]
 	},
 	"images": {
 		"src": "src/images/**",
