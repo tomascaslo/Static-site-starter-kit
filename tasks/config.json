@@ -1,0 +1,27 @@
+{
+	"buildDir": "dist",
+	"handlebars": {
+		"src": "src/templates/**"
+	},
+	"images": {
+		"src": "src/images/**",
+		"dest": "images"
+	},
+	"js": {
+		"src": {
+			"files": [
+				"src/js/**/*.js"
+			],
+			"minifiedLibs": []
+		},
+		"name": "all.min.js",
+		"dest": "js"
+	},
+	"scss": {
+		"includePaths": "",
+		"lint": "src/scss/**/*.scss",
+		"src": "src/scss/main.scss",
+		"name": "all.min.css",
+		"dest": "css"
+	}
+}
