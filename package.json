@@ -1,7 +1,9 @@
 {
   "name": "html-static-starter",
   "version": "0.0.1",
-  "engines" : {"node": ">=4.1.0"},
+  "engines": {
+    "node": ">=4.1.0"
+  },
   "description": "HTML static site starter kit",
   "main": "index.js",
   "scripts": {
