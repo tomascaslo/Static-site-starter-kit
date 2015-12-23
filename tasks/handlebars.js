@@ -10,9 +10,9 @@ var rename		= require('gulp-rename');
 gulp.task('handlebars', function () {
 	return gulp.src(config.handlebars.src)
 	.pipe(handlebars(
-		{firstName: 'JC'},
-		{batch: ['src/templates/partials']}
+		{}, // Inject data for handlebars template here
+		{batch: config.handlebars.partials}
 	))
 	.pipe(rename({extname: '.html'}))
-	.pipe(gulp.dest(config.buildDir));
+	.pipe(gulp.dest(config.handlebars.dest, {cwd: config.buildDir}));
 });
