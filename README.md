@@ -1,7 +1,7 @@
 # html-static-starter
 HTML static site starter kit.
 
-##Instalation
+##Installation
 ```shell
 npm install
 ```
@@ -17,11 +17,11 @@ gulp build
 _The build task is the default task, running ```gulp``` only will build your project_
 
 ##Paths & configuration
-Source files are in **/src** folder. The views are available in the **src/templates** folder (see details below).
+Source files are in the **/src** folder. The views are available in the **src/templates** folder (see details below).
 
-When you build your project a **/dist** will be created with all statics files compiled and rendered files (Html, Css, Js, Images).
+When you build your project a **/dist** folder will be created with all static files compiled and rendered files (Html, Css, Js, Images).
 
-These path could be changed in the **/tasks/congif.json** file:
+These paths may be changed in the **/tasks/congif.json** file:
 - **buildDir**: Build directory
 - **handlebars**
     + **partials**: Handlebars partials directories
@@ -35,19 +35,20 @@ These path could be changed in the **/tasks/congif.json** file:
     + **src.minifiedLibs**: Paths of Js files that won't be linted, uglified and minified (eg: external libraries already .min files)
     + **name**: Minified Js file name
     + **dest**: Minified Js dest path (relative to the build directory)
-- **js**:
-    + **includePaths**: `includePaths` Saas option
+- **scss**:
+    + **includePaths**: `includePaths` Sass option
     + **lint**: Paths of Scss files to lint
     + **src**: Paths of Scss files to build
     + **name**: Minified Css file name
     + **dest**: Minified Css dest path (relative to the build directory)
 
 ##Views (Html / Handlebars)
-Handlebars tiles are rendered with [gulp-compile-handlebars](https://github.com/kaanon/gulp-compile-handlebars)
+Handlebars files are rendered with [gulp-compile-handlebars](https://github.com/kaanon/gulp-compile-handlebars)
 Handlebars files are available in **/src/templates/views** and Handlebars partials are located in **/src/templates/partials**.
 
 ##Styles (Css / Scss)
-Scss files are :
+Scss files are:
+
 1. Linted with [gulp-scss-lint](https://github.com/juanfran/gulp-scss-lint)
 1. Rendered with [gulp-sass](https://github.com/dlmanning/gulp-sass)
 2. Clean with [gulp-uncss](https://github.com/ben-eb/gulp-uncss) and [gulp-cssnano](https://github.com/ben-eb/gulp-cssnano)
@@ -55,7 +56,8 @@ Scss files are :
 The sourcemap is rendered with the minified file.
 
 ##Scripts
-Javascript files are :
+Javascript files are:
+
 1. Linted with [gulp-jshint](https://github.com/spalger/gulp-jshint) and [gulp-jscs](https://github.com/jscs-dev/gulp-jscs).
 2. Uglified with [gulp-uglify](https://github.com/terinjokes/gulp-uglify)
 3. Concatenated (appended) with already minified libraries specified in `minifiedLibs` in config.json file.
