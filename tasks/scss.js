@@ -19,7 +19,7 @@ gulp.task('scss', ['lint-scss'], function () {
 	.pipe(concat(config.scss.name))
 	.pipe(uncss({html: [config.buildDir + '/**/*.html']}))
 	.pipe(nano())
-	.pipe(sourcemaps.write())
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(config.scss.dest, {cwd: config.buildDir}));
 });
 

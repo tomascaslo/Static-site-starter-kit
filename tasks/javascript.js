@@ -28,6 +28,6 @@ gulp.task('javascript', function () {
 	)
 	.pipe(sourcemaps.init())
 	.pipe(concat(config.js.name))
-	.pipe(sourcemaps.write())
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(config.js.dest, {cwd: config.buildDir}));
 });
