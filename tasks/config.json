@@ -1,7 +1,7 @@
 {
 	"buildDir": "dist",
 	"handlebars": {
-		"context": "../src/templates/context.js",
+		"context": "../src/templates/context",
 		"src": ["src/templates/views/**/*.hbs"],
 		"partials": "src/templates/partials",
 		"dest": "."
