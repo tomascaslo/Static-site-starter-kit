@@ -22,6 +22,7 @@ When you build your project a **/dist** folder will be created with all static f
 These paths may be changed in the **/tasks/congif.json** file:
 - **buildDir**: Build directory
 - **handlebars**
+    + **context**: Handlebars context variables.
     + **partials**: Handlebars partials directories
     + **src**: Handlebars files to render
     + **dest**: Html dest path (relative to the build directory)
@@ -43,6 +44,8 @@ These paths may be changed in the **/tasks/congif.json** file:
 ##Views (Html / Handlebars)
 Handlebars files are rendered with [gulp-compile-handlebars](https://github.com/kaanon/gulp-compile-handlebars)
 Handlebars files are available in **/src/templates/views** and Handlebars partials are located in **/src/templates/partials**.
+
+The Handlebars context comes from the file **/src/templates/context.js**.
 
 ##Styles (Css / Scss)
 Scss files are:

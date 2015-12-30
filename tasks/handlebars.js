@@ -6,7 +6,7 @@ var handlebars	= require('gulp-compile-handlebars');
 var rename		= require('gulp-rename');
 
 // Handlebars custom ontext
-var context		= require(config.handlebars.context);
+var context	= require(config.handlebars.context);
 
 
 // Compile handlebars templates
