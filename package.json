@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/SimonTernoir/html-static-starter#readme",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.0",
@@ -37,7 +38,10 @@
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
     "merge-stream": "^1.0.0",
-    "require-dir": "^0.3.0",
-    "rimraf": "^2.4.4"
+    "require-dir": "^0.3.0"
+  },
+   "scripts": {
+    "build": "gulp build",
+    "gulp": "gulp"
   }
 }

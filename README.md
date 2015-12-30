@@ -11,10 +11,8 @@ npm install
 ##Usage
 ####Build
 ```shell
-gulp build
+npm run build
 ```
-
-_The build task is the default task, running ```gulp``` only will build your project_
 
 ##Paths & configuration
 Source files are in the **/src** folder. The views are available in the **src/templates** folder (see details below).
