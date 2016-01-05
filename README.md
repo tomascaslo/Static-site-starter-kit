@@ -12,10 +12,18 @@ npm install
 **Note:** gulp-scss-lint plugin requires Ruby and [scss-lint gem](https://github.com/causes/scss-lint). ```gem install scss_lint``` to install it.
 
 ##Usage
+####Develop
+```shell
+npm run dev
+```
+This command build your project without optimize files (minify, uglify, etc.) and start a BrowserSync server, listening new modifications in **/src** folder.
+
 ####Build
 ```shell
 npm run build
 ```
+This command build your project in **/dist** folder.
+
 
 ##Paths & configuration
 Source files are in the **/src** folder. The views are available in the **src/templates** folder (see details below).
