@@ -75,9 +75,10 @@
         "alert",
         "console",
         "require",
-        "module",
-        "exports",
-        "window"
+        "window",
+        "__dirname",
+        "argv",
+        "module"
     ]
 
 }
