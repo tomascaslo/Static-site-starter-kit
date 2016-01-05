@@ -1,7 +1,11 @@
 {
+	"assets": {
+		"src": "src/assets/**/*",
+		"dest": "assets"
+	},
 	"buildDir": "dist",
 	"handlebars": {
-		"context": "src/templates/context",
+		"context": "src/templates/context.js",
 		"src": ["src/templates/views/**/*.hbs"],
 		"partials": "src/templates/partials",
 		"dest": "."
@@ -19,8 +23,8 @@
 	},
 	"scss": {
 		"includePaths": "",
-		"lint": "src/scss/**/*.scss",
-		"src": "src/scss/main.scss",
+		"all": "src/scss/**/*.scss",
+		"main": "src/scss/main.scss",
 		"name": "all.min.css",
 		"dest": "css"
 	}

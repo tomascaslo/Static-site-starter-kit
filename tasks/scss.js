@@ -1,6 +1,8 @@
 'use strict';
 
 var gulp		= require('gulp');
+var gulpif		= require('gulp-if');
+var args		= require('yargs').argv;
 var config		= require('./config.json');
 var scsslint	= require('gulp-scss-lint');
 var sass		= require('gulp-sass');
@@ -12,19 +14,27 @@ var sourcemaps	= require('gulp-sourcemaps');
 
 // Compile, uncss, minify and sourcemap scss
 gulp.task('scss', ['lint-scss'], function () {
-	return gulp.src(config.scss.src)
+	var _release = !!args.release;
+
+	return gulp.src(config.scss.main)
 	.pipe(sourcemaps.init())
 	.pipe(sass({includePaths: config.scss.includePaths})
 		.on('error', sass.logError))
 	.pipe(concat(config.scss.name))
-	.pipe(uncss({html: [config.buildDir + '/**/*.html']}))
-	.pipe(nano())
-	.pipe(sourcemaps.write('.'))
+	.pipe(gulpif(_release,
+		uncss({html: [config.buildDir + '/**/*.html']})
+	))
+	.pipe(gulpif(_release,
+		nano()
+	))
+	.pipe(gulpif(_release,
+		sourcemaps.write('.')
+	))
 	.pipe(gulp.dest(config.scss.dest, {cwd: config.buildDir}));
 });
 
 gulp.task('lint-scss', function () {
-	return gulp.src(config.scss.lint)
+	return gulp.src(config.scss.all)
 	.pipe(scsslint({config: '.scss-lint.yml'}))
 	.pipe(scsslint.failReporter());
 });
