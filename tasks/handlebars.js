@@ -1,12 +1,13 @@
 'use strict';
 
+var path		= require('path');
 var gulp		= require('gulp');
 var config		= require('./config.json');
 var handlebars	= require('gulp-compile-handlebars');
 var rename		= require('gulp-rename');
 
-// Handlebars custom ontext
-var context	= require(config.handlebars.context);
+// Handlebars custom context
+var context	= require(path.resolve(config.handlebars.context));
 
 
 // Compile handlebars templates
