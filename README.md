@@ -33,8 +33,7 @@ These paths may be changed in the **/tasks/congif.json** file:
     + **src**: Images source path
     + **des**: Images dest path (relative to the build directory)
 - **js**:
-    + **src.files**: Paths of Js files that will be linted, uglified and minified
-    + **src.minifiedLibs**: Paths of Js files that won't be linted, uglified and minified (eg: external libraries already .min files)
+    + **src**: Paths of Js files that will be linted, uglified and minified
     + **name**: Minified Js file name
     + **dest**: Minified Js dest path (relative to the build directory)
 - **scss**:
