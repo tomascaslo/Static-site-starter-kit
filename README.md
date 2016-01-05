@@ -1,5 +1,8 @@
 # html-static-starter
-HTML static site starter kit.
+> This is a static site starter kit powered by
+> [Handlebars](http://getbootstrap.com/), [Sass](http://sass-lang.com),
+> [Gulp](http://gulpjs.com/), and [BrowserSync](http://www.browsersync.io).
+
 
 ##Installation
 ```shell
