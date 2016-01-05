@@ -7,7 +7,9 @@
   "description": "HTML static site starter kit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "build": "gulp build --release",
+    "gulp": "gulp --release"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,12 @@
   },
   "homepage": "https://github.com/SimonTernoir/html-static-starter#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-cssnano": "^2.0.0",
+    "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^2.0.0",
@@ -36,10 +40,7 @@
     "gulp-uncss": "^1.0.4",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
-    "require-dir": "^0.3.0"
-  },
-   "scripts": {
-    "build": "gulp build",
-    "gulp": "gulp"
+    "require-dir": "^0.3.0",
+    "yargs": "^3.31.0"
   }
 }
