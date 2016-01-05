@@ -32,7 +32,7 @@ gulp.task('watch', function () {
 	// ----------------------
 	gulp.watch(
 		config.handlebars.src.concat(
-			config.handlebars.partials,
+			config.handlebars.partials + '/**/*.hbs',
 			config.handlebars.context
 		), function (file) {
 			gulpSequence('handlebars', browserSync.reload);
