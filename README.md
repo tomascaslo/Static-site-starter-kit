@@ -30,7 +30,7 @@ Source files are in the **/src** folder. The views are available in the **src/te
 
 When you build your project a **/dist** folder will be created with all static files compiled and rendered files (Html, Css, Js, Images).
 
-These paths may be changed in the **/tasks/congif.json** file:
+These paths may be changed in the **/tasks/config.json** file:
 - **buildDir**: Build directory
 - **handlebars**
     + **context**: Handlebars context variables.
