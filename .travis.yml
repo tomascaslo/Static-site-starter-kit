@@ -18,6 +18,8 @@ deploy:
   provider: releases
   api_key:
     secure: TLi3zJbDAr9yajrmyhgpT16QMPWEjR9qXT4GkS5UcFXnDqnOOaNs2znX4KzPpueQrIefl7m9izIfA7zq2mSpX0uxzaA0dRzQrmVIRHpI9LN98cBhjH/a0HJqAlV/Fh7AffPHmVpUYZHc8CyobC6xrnl5FGMu1LLT1hg4Vdtbhp0irDEBmEeDVqLrA9PmhFZ23cj9bf1AvggylCpcecjGcGgFKKhvFrtErKyezeHhLhhMoi3Pw7u72yII2IPjZZyUPi2vbK0NwxnJ89kzI6JgxkSyUlhW5sfj4fOHkb83cBK4ieAB3PVDeXuJbgcbw53tDHr9JWXCi1qtej/n13xkhoCbFjhca7CvwsYzXy5o/iSdNbPJekiFqCFdjwXtKUrt/617KESfH8dPvbGFx5ZWX8tLCXr4YNLIQL5S5VV+E6vzxVGDfGAjU/+C09BpoFJlLwtUrN12YjMY6SGELAmaWCRpqCGK4JvtTtgM4QjVi2jQikcAvV1KOl1rFbiodXYqGXmJIubGQjQObcK7pIfv+P0v/jl5ohxcrJSYNkNRzgkNXrIGwAOtF0fJcNrY419oyzpCMrt65ougWP+WZwO35k4Mdkxu8yKbpM3Kc5LTzgjss0Ug6eQKzI7iQYirp9FRDxkZ8nnGQ9geL1daXt+zcuhFr1y2pvTKJ5Jwa6arlws=
-  file: dist/
+  file_glob: true
+  file: "dist/*"
+  skip_cleanup: true
   on:
     tags: true
