@@ -78,7 +78,8 @@
         "window",
         "__dirname",
         "argv",
-        "module"
+        "module",
+        "process"
     ]
 
 }
