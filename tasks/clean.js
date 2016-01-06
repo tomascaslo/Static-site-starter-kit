@@ -7,6 +7,9 @@ var del			= require('del');
 
 // Delete build directory
 gulp.task('clean', function () {
-	del([config.buildDir]);
+	del([
+		config.buildDir,
+		config.deploy.github.publish
+	]);
 });
 

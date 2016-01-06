@@ -7,7 +7,8 @@
 	"deploy": {
 		"github": {
 			"owner": "SimonTernoir",
-			"repository": "Static-site-starter-kit"
+			"repository": "Static-site-starter-kit",
+			"cacheDir": ".publish"
 		}
 	},
 	"handlebars": {

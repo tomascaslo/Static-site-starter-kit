@@ -19,6 +19,7 @@ gulp.task('github_deploy', function () {
 	return gulp.src('**/*', {cwd: config.buildDir})
 	.pipe(ghPages({
 		remoteUrl: remoteUrl,
+		cacheDir: config.deploy.github.cacheDir,
 		message: 'Deploy: ' + new Date()
 	}));
 });
