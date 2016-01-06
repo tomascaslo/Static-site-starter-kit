@@ -1,4 +1,4 @@
-# html-static-starter
+# html-static-starter [![Build Status](https://travis-ci.org/SimonTernoir/Static-site-starter-kit.svg?branch=master)](https://travis-ci.org/SimonTernoir/Static-site-starter-kit)
 > This is a static site starter kit powered by
 > [Handlebars](http://getbootstrap.com/), [Sass](http://sass-lang.com),
 > [Gulp](http://gulpjs.com/), and [BrowserSync](http://www.browsersync.io).
