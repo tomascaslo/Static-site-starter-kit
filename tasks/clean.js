@@ -9,7 +9,7 @@ var del			= require('del');
 gulp.task('clean', function () {
 	del([
 		config.buildDir,
-		config.deploy.github.publish
+		config.deploy.github.cacheDir
 	]);
 });
 
