@@ -1,4 +1,5 @@
 # html-static-starter [![Build Status](https://travis-ci.org/SimonTernoir/Static-site-starter-kit.svg?branch=master)](https://travis-ci.org/SimonTernoir/Static-site-starter-kit)
+
 > This is a static site starter kit powered by
 > [Handlebars](http://getbootstrap.com/), [Sass](http://sass-lang.com),
 > [Gulp](http://gulpjs.com/), and [BrowserSync](http://www.browsersync.io).
@@ -12,7 +13,7 @@ npm install
 **Note:** gulp-scss-lint plugin requires Ruby and [scss-lint gem](https://github.com/causes/scss-lint). ```gem install scss_lint``` to install it.
 
 ##Usage
-####Develop
+####Development
 ```shell
 npm run dev
 ```
@@ -23,6 +24,9 @@ This command build your project without optimize files (minify, uglify, etc.) an
 npm run build
 ```
 This command build your project in **/dist** folder.
+
+##Automation
+A [.travis.yml](.travis.yml) file is available in this project. By default Travis will run the build command after each commit.
 
 
 ##Paths & configuration
