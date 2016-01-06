@@ -16,7 +16,7 @@ gulp.task('github_deploy', function () {
 	remoteUrl += config.deploy.github.repository;
 	remoteUrl += '.git';
 
-	return gulp.src(config.buildDir)
+	return gulp.src('**/*', {cwd: config.buildDir})
 	.pipe(ghPages({
 		remoteUrl: remoteUrl,
 		message: 'Deploy: ' + new Date()
