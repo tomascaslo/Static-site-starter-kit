@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build --release",
-    "github_deploy": "gulp github_deploy",
+    "deploy": "gulp deploy",
     "gulp": "gulp --release"
   },
   "repository": {

@@ -20,7 +20,7 @@ gulp.task('dev', function (cb) {
 
 // Deploy
 // ------
-// > Launch "github_deploy"
+// > Launch "deploy"
 
 
 // Default task

@@ -6,7 +6,7 @@
 	"buildDir": "dist",
 	"deploy": {
 		"github": {
-			"owner:": "SimonTernoir",
+			"owner": "SimonTernoir",
 			"repository": "Static-site-starter-kit"
 		}
 	},

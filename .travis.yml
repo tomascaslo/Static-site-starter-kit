@@ -5,7 +5,7 @@ before_install:
 script:
 - npm run build --release
 after_success:
-- node run github_deploy
+- node run deploy
 node_js:
 - '4.1'
 env:

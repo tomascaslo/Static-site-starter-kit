@@ -4,7 +4,7 @@ var gulp		= require('gulp');
 var config		= require('./config.json');
 var ghPages		= require('gulp-gh-pages');
 
-gulp.task('github_deploy', function () {
+gulp.task('deploy', function () {
 	// Github remote URL with auth token
 	var remoteUrl = '';
 
