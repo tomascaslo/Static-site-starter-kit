@@ -6,7 +6,7 @@ var args		= require('yargs').argv;
 var config		= require('./config.json');
 var scsslint	= require('gulp-scss-lint');
 var sass		= require('gulp-sass');
-var concat		= require('gulp-concat');
+var rename		= require('gulp-rename');
 var uncss		= require('gulp-uncss');
 var nano		= require('gulp-cssnano');
 var sourcemaps	= require('gulp-sourcemaps');
@@ -20,7 +20,7 @@ gulp.task('scss', ['lint-scss'], function () {
 	.pipe(sourcemaps.init())
 	.pipe(sass({includePaths: config.scss.includePaths})
 		.on('error', sass.logError))
-	.pipe(concat(config.scss.name))
+	.pipe(rename(config.scss.name))
 	.pipe(gulpif(_release,
 		uncss({html: [config.buildDir + '/**/*.html']})
 	))
