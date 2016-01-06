@@ -18,6 +18,11 @@ gulp.task('dev', function (cb) {
 	gulpSequence('build', 'watch', cb);
 });
 
+// Deploy
+// ------
+// > Launch "github_deploy"
+
+
 // Default task
 // ------------
 gulp.task('default', ['build']);

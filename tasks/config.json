@@ -4,6 +4,12 @@
 		"dest": "assets"
 	},
 	"buildDir": "dist",
+	"deploy": {
+		"github": {
+			"owner:": "SimonTernoir",
+			"repository": "Static-site-starter-kit"
+		}
+	},
 	"handlebars": {
 		"context": "src/templates/context.js",
 		"src": ["src/templates/views/**/*.hbs"],
