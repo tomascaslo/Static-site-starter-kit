@@ -81,3 +81,53 @@ The sourcemap is rendered with the minified file.
 
 ##Images
 Images are are minified with [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin).
+
+
+##Deploy on GitHub Pages
+####Step 1 - Create Github token env var
+Create a new Personal access token on GitHub ([documentation](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)) and add it in your Environment Variables ([Documentation](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)) on travis. Name it **GITHUB_TOKEN**.
+
+####Step 2 - Create Gulp task
+Install `gulp-gh-pages` Gulp plugin:
+```shell
+npm install gulp-gh-pages --save-dev
+```
+
+Create a `github_deploy` gulp task (in **task/** folder of in the **gulpfile.js**).
+```javascript
+'use strict';
+
+var gulp        = require('gulp');
+var config      = require('./config.json');
+var ghPages     = require('gulp-gh-pages');
+
+gulp.task('github_deploy', function () {
+    return gulp.src('**/*', {cwd: config.buildDir})
+    .pipe(ghPages({
+        remoteUrl: 'https://' + process.env.GITHUB_TOKEN + '@github.com/' + GITHUB_OWNER + '/' + GITHUB_REPOSITORY + '.git',
+        cacheDir: config.deploy.github.cacheDir,
+        message: 'Deployed: ' + new Date()
+    }));
+});
+
+```
+**Note:** Don't forget to change GITHUB_OWNER and GITHUB_REPOSITORY.
+
+####Step 3 - Modify package.json
+Add this line in the `scripts"`"` in **package.json** file:
+```json
+"github_deploy": "gulp github_deploy"
+```
+
+####Step 4 - Modify .travis.yml
+Add this 4 lines in your **.travis.yml** file:
+```yaml
+after_success:
+- git config --global user.name = "NAME"
+- git config --global user.email = "EMAIL"
+- npm run github_deploy
+```
+**Note:** Don't forget to change NAME and EMAIL.
+
+
+

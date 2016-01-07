@@ -4,10 +4,6 @@ before_install:
 - gem install scss_lint
 script:
 - npm run build --release
-after_success:
-- git config --global user.name = "Travis CI"
-- git config --global user.email = "Travis-CI@example.com"
-- npm run github_deploy
 node_js:
 - '4.1'
 env:
