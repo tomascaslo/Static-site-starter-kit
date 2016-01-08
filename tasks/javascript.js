@@ -21,10 +21,14 @@ gulp.task('javascript', function () {
 	.pipe(sourcemaps.init())
 	.pipe(jshint('.jshintrc'))
 	.pipe(jshint.reporter('jshint-stylish'))
-	.pipe(jshint.reporter('fail'))
+	.pipe(gulpif(_release,
+		jshint.reporter('fail')
+	))
 	.pipe(jscs())
 	.pipe(jscs.reporter())
-	.pipe(jscs.reporter('fail'))
+	.pipe(gulpif(_release,
+		jscs.reporter('fail')
+	))
 	.pipe(gulpif(_release,
 		uglify()
 	))

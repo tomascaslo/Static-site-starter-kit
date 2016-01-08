@@ -34,9 +34,11 @@ gulp.task('scss', ['lint-scss'], function () {
 });
 
 gulp.task('lint-scss', function () {
+	var _release = !!args.release;
+
 	return gulp.src(config.scss.all)
 	.pipe(scsslint({config: '.scss-lint.yml'}))
-	.pipe(scsslint.failReporter());
+	.pipe(gulpif(_release,
+		scsslint.failReporter()
+	));
 });
-
-
