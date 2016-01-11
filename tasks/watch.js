@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp			= require('gulp');
-var path			= require('path');
 var config			= require('./config.json');
 var browserSync		= require('browser-sync').create();
 var gulpSequence	= require('gulp-sequence');
