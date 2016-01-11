@@ -22,7 +22,7 @@ gulp.task('scss', ['lint-scss'], function () {
 		.on('error', sass.logError))
 	.pipe(rename(config.scss.name))
 	.pipe(gulpif(_release,
-		uncss({html: config.buildDir + '/**/*.html'})
+		uncss({html: [config.buildDir + '/**/*.html']})
 	))
 	.pipe(gulpif(_release,
 		nano()
