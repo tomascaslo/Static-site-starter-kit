@@ -2,7 +2,6 @@
 
 var gulp		= require('gulp');
 var gulpif		= require('gulp-if');
-var args		= require('yargs').argv;
 var config		= require('./config.json');
 var scsslint	= require('gulp-scss-lint');
 var sass		= require('gulp-sass');
@@ -14,7 +13,6 @@ var sourcemaps	= require('gulp-sourcemaps');
 
 // Compile, uncss, minify and sourcemap scss
 gulp.task('scss', ['lint-scss'], function () {
-	var _release = !!args.release;
 
 	return gulp.src(config.scss.main)
 	.pipe(sourcemaps.init())
@@ -37,7 +35,6 @@ gulp.task('scss', ['lint-scss'], function () {
 });
 
 gulp.task('lint-scss', function () {
-	var _release = !!args.release;
 
 	return gulp.src(config.scss.all)
 	.pipe(scsslint({config: '.scss-lint.yml'}))
@@ -45,3 +42,5 @@ gulp.task('lint-scss', function () {
 		scsslint.failReporter()
 	));
 });
+
+

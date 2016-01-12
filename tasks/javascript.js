@@ -2,7 +2,6 @@
 
 var gulp		= require('gulp');
 var gulpif		= require('gulp-if');
-var args		= require('yargs').argv;
 var config		= require('./config.json');
 var jshint		= require('gulp-jshint');
 var jscs		= require('gulp-jscs');
@@ -15,7 +14,6 @@ var sourcemaps	= require('gulp-sourcemaps');
 // Write sourceMap
 // Concat in one js file
 gulp.task('javascript', function () {
-	var _release = !!args.release;
 
 	return gulp.src(config.js.src)
 	.pipe(sourcemaps.init())
