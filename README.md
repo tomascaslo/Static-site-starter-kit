@@ -129,5 +129,6 @@ after_success:
 ```
 **Note:** Don't forget to change NAME and EMAIL.
 
-
+##Troubleshooting
+We have experienced some troubles with javascript files loaded with relatives URLs and `uncss` plugin in `scss gulp task`.
 
