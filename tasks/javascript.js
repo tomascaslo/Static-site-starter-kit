@@ -3,8 +3,7 @@
 var gulp		= require('gulp');
 var gulpif		= require('gulp-if');
 var config		= require('./config.json');
-var jshint		= require('gulp-jshint');
-var jscs		= require('gulp-jscs');
+var eslint		= require('gulp-eslint');
 var rename		= require('gulp-rename');
 var uglify		= require('gulp-uglify');
 var sourcemaps	= require('gulp-sourcemaps');
@@ -16,17 +15,13 @@ var sourcemaps	= require('gulp-sourcemaps');
 gulp.task('javascript', function () {
 
 	return gulp.src(config.js.src)
+
 	.pipe(sourcemaps.init())
-	.pipe(jshint('.jshintrc'))
-	.pipe(jshint.reporter('jshint-stylish'))
-	.pipe(gulpif(_release,
-		jshint.reporter('fail')
-	))
-	.pipe(jscs())
-	.pipe(jscs.reporter())
-	.pipe(gulpif(_release,
-		jscs.reporter('fail')
-	))
+	.pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(gulpif(_release,
+    	eslint.failAfterError()
+    ))
 	.pipe(gulpif(_release,
 		uglify()
 	))
