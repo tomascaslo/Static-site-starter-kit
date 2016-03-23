@@ -4,6 +4,7 @@ var gulp		= require('gulp');
 var gulpif		= require('gulp-if');
 var config		= require('./config.json');
 var eslint		= require('gulp-eslint');
+var concat		= require('gulp-concat');
 var rename		= require('gulp-rename');
 var uglify		= require('gulp-uglify');
 var sourcemaps	= require('gulp-sourcemaps');
@@ -12,7 +13,7 @@ var sourcemaps	= require('gulp-sourcemaps');
 // Lint and uglify js files
 // Write sourceMap
 // Concat in one js file
-gulp.task('javascript', function () {
+gulp.task('javascript', function javascript() {
 
 	return gulp.src(config.js.src)
 
@@ -20,9 +21,10 @@ gulp.task('javascript', function () {
 	.pipe(eslint())
     .pipe(eslint.format())
     .pipe(gulpif(_release,
-    	eslint.failAfterError()
+        eslint.failAfterError()
     ))
-	.pipe(gulpif(_release,
+    .pipe(concat('temp.js'))
+    .pipe(gulpif(_release,
 		uglify()
 	))
 	.pipe(rename(config.js.name))

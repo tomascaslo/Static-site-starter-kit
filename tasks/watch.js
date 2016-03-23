@@ -17,7 +17,7 @@ gulp.task('watch', function () {
 
 	// Watch Javascript files
 	// ----------------------
-	gulp.watch(config.scss.all, function () {
+	gulp.watch(config.scss.lint, function () {
 		gulpSequence('scss', browserSync.reload);
 	});
 

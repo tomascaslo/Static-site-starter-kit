@@ -14,7 +14,7 @@ var sourcemaps	= require('gulp-sourcemaps');
 // Compile, uncss, minify and sourcemap scss
 gulp.task('scss', ['lint-scss'], function () {
 
-	return gulp.src(config.scss.main)
+	return gulp.src(config.scss.src)
 	.pipe(sourcemaps.init())
 	.pipe(sass({includePaths: config.scss.includePaths})
 		.on('error', sass.logError))
@@ -36,7 +36,7 @@ gulp.task('scss', ['lint-scss'], function () {
 
 gulp.task('lint-scss', function () {
 
-	return gulp.src(config.scss.all)
+	return gulp.src(config.scss.lint)
 	.pipe(scsslint({config: '.scss-lint.yml'}))
 	.pipe(gulpif(_release,
 		scsslint.failReporter()

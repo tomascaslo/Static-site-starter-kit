@@ -1,6 +1,9 @@
 {
   "env": {
-    "node": true
+    "node": true,
     "browser": false
-  }
+  },
+  "globals": {
+    "_release": true
+  },
 }

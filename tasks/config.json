@@ -23,8 +23,8 @@
 	},
 	"scss": {
 		"includePaths": "",
-		"all": "src/scss/**/*.scss",
-		"main": "src/scss/main.scss",
+		"lint": "src/scss/**/*.scss",
+		"src": "src/scss/main.scss",
 		"name": "all.min.css",
 		"dest": "css"
 	}
