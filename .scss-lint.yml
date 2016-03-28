@@ -133,3 +133,6 @@ linters:
 
   VendorPrefixes:
     enabled: false
+
+  UnnecessaryParentReference:
+    enabled: false

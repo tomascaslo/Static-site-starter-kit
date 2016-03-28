@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="/css/all.min.css"/>
-</head>
-<body>
+{{#>layout }}
+<div>
+  <img src="/images/JC.jpg" alt="Jacques Chirac">
 
-	{{> header}}
-
-	<img src="/images/JC.jpg" alt="Jacques Chirac">
 	<div>
-		<em>Last build: {{date}}</em>
+		<em>Last build: {{buildTime}}</em>
 	</div>
+</div>
 
-	{{> footer}}
-
-	<script type="text/javascript" src="/js/all.min.js"></script>
-
-</body>
-</html>
+{{/layout}}

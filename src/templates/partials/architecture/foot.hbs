@@ -1,0 +1,12 @@
+{{!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– --}}
+	<script type="text/javascript" src="/js/all.min.js"></script>
+
+
+{{!-- Window model
+	–––––––––––––––––––––––––––––––––––––––––––––––––– --}}
+	<script>
+		window.model = {
+			context: {{{toJson .}}}
+		};
+	</script>
