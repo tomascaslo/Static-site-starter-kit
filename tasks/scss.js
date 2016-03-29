@@ -22,7 +22,8 @@ gulp.task('scss', ['lint-scss'], function scss() {
   .pipe(gulpif(_release,
     uncss({
       html: [config.buildDir + '/**/*.html'],
-      htmlroot: config.buildDir
+      htmlroot: config.buildDir,
+      ignore: [/\.js-/]
     })
   ))
   .pipe(gulpif(_release,
