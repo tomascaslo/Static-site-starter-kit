@@ -1,7 +1,7 @@
 {
-	"assets": {
+  "assets": {
 		"src": "src/assets/**/*",
-		"dest": "assets"
+		"dest": "."
 	},
 	"buildDir": "dist",
 	"handlebars": {
