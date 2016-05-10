@@ -25,7 +25,7 @@
 	"scss": {
 		"includePaths": "",
 		"lint": "src/scss/**/*.scss",
-		"src": "src/scss/main.scss",
+		"src": "src/scss/**/*.scss",
 		"name": "all.min.css",
 		"dest": "css"
 	}
