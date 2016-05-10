@@ -15,7 +15,7 @@ require('require-dir')('./tasks', {recurse: true});
 // Build task
 // ----------
 gulp.task('build', function build(cb) {
-  gulpSequence('clean', 'handlebars', ['javascript', 'scss', 'images', 'assets'], cb);
+  gulpSequence('clean', 'handlebars', ['javascript', 'scss', 'images', 'assets'], 'inject', cb);
 });
 
 // Development task

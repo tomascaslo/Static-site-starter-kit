@@ -32,6 +32,7 @@
     "gulp-eslint": "^1.1.1",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
+    "gulp-inject": "^4.0.0",
     "gulp-remove-empty-lines": "0.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
@@ -43,5 +44,8 @@
     "handlebars-intl": "^1.1.2",
     "require-dir": "^0.3.0",
     "yargs": "^3.31.0"
+  },
+  "dependencies": {
+    "lodash": "^4.12.0"
   }
 }

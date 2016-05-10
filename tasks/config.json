@@ -1,5 +1,5 @@
 {
-  "assets": {
+	"assets": {
 		"src": "src/assets/**/*",
 		"dest": "."
 	},
@@ -8,7 +8,7 @@
 		"context": "src/templates/context.js",
 		"src": ["src/templates/views/**/*.hbs"],
 		"partials": "src/templates/partials",
-    "viewsDir": "src/templates/views/",
+	    "viewsDir": "src/templates/views/",
 		"dest": "."
 	},
 	"images": {
