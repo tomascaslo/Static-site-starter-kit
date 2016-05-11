@@ -23,9 +23,9 @@
 		"dest": "js"
 	},
 	"scss": {
-		"includePaths": "",
+		"includePaths": ["./src/scss"],
 		"lint": "src/scss/**/*.scss",
-		"src": "src/scss/**/*.scss",
+		"src": "src/scss/main.scss",
 		"name": "all.min.css",
 		"dest": "css"
 	}
