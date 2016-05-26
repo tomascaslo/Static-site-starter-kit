@@ -40,7 +40,7 @@ function iscss(file) {
 
 function getSorted(fileType) {
   return _.filter(npmFilesArray, function(file) {
-  	return path.extname(file) === ('.' + fileType);
+    return path.extname(file) === ('.' + fileType);
   });
 }
 
@@ -51,33 +51,33 @@ function getFilesArray(filesObj) {
   var key;
 
   _.forEach(filesObj, function(lib) {
-	_.forEach(lib, function(file) {
-	  var fileWeight, filePath;
-	  
-	  if (typeof file.weight === 'undefined' || isNaN(file.weight)) {
-		file.weight = 0;
-	  }
-	  
-	  fileWeight = file.weight.toString();
+  _.forEach(lib, function(file) {
+    var fileWeight, filePath;
+    
+    if (typeof file.weight === 'undefined' || isNaN(file.weight)) {
+    file.weight = 0;
+    }
+    
+    fileWeight = file.weight.toString();
       filePath = './' + file.path;
-	  if (npmFilesObj.hasOwnProperty(fileWeight)) {
-		npmFilesObj[fileWeight].push(filePath);
-	  } else {
-		npmFilesObj[fileWeight] = [filePath];
-	  }
-	});
+    if (npmFilesObj.hasOwnProperty(fileWeight)) {
+    npmFilesObj[fileWeight].push(filePath);
+    } else {
+    npmFilesObj[fileWeight] = [filePath];
+    }
+  });
   });
   
   for (key in npmFilesObj) {
-	if (npmFilesObj.hasOwnProperty(key)) {
-	  keys.push(key);
-	}
+  if (npmFilesObj.hasOwnProperty(key)) {
+    keys.push(key);
+  }
   }
 
   keys.sort();
 
   _.forEach(keys, function(key) {
-  	npmFilesWeightedArray = _.concat(npmFilesWeightedArray, npmFilesObj[key]);
+    npmFilesWeightedArray = _.concat(npmFilesWeightedArray, npmFilesObj[key]);
   });
 
   return npmFilesWeightedArray;

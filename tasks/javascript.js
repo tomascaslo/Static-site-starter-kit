@@ -1,13 +1,13 @@
 'use strict';
 
-var gulp				= require('gulp');
-var gulpif			= require('gulp-if');
-var config			= require('./config.json');
-var eslint			= require('gulp-eslint');
-var concat			= require('gulp-concat');
-var rename			= require('gulp-rename');
-var uglify			= require('gulp-uglify');
-var sourcemaps	= require('gulp-sourcemaps');
+var gulp        = require('gulp');
+var gulpif      = require('gulp-if');
+var config      = require('./config.json');
+var eslint      = require('gulp-eslint');
+var concat      = require('gulp-concat');
+var rename      = require('gulp-rename');
+var uglify      = require('gulp-uglify');
+var sourcemaps  = require('gulp-sourcemaps');
 
 
 // Lint and uglify js files
@@ -20,9 +20,9 @@ gulp.task('javascript', function javascript() {
   .pipe(sourcemaps.init())
   .pipe(eslint())
   .pipe(eslint.format())
-  .pipe(gulpif(_release,
-    eslint.failAfterError()
-  ))
+  //.pipe(gulpif(_release,
+    //eslint.failAfterError()
+  //))
   .pipe(concat('temp.js'))
   .pipe(gulpif(_release,
     uglify()

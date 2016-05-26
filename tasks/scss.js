@@ -1,14 +1,14 @@
 'use strict';
 
-var gulp				= require('gulp');
-var gulpif			= require('gulp-if');
-var config			= require('./config.json');
-var scsslint		= require('gulp-scss-lint');
-var sass				= require('gulp-sass');
-var rename			= require('gulp-rename');
-var uncss				= require('gulp-uncss');
-var nano				= require('gulp-cssnano');
-var sourcemaps	= require('gulp-sourcemaps');
+var gulp        = require('gulp');
+var gulpif      = require('gulp-if');
+var config      = require('./config.json');
+var scsslint    = require('gulp-scss-lint');
+var sass        = require('gulp-sass');
+var rename      = require('gulp-rename');
+var uncss       = require('gulp-uncss');
+var nano        = require('gulp-cssnano');
+var sourcemaps  = require('gulp-sourcemaps');
 
 
 // Compile, uncss, minify and sourcemap scss
@@ -37,7 +37,7 @@ gulp.task('lint-scss', function lintScss() {
 
   return gulp.src(config.scss.lint)
   .pipe(scsslint({config: '.scss-lint.yml'}))
-  .pipe(gulpif(_release,
-    scsslint.failReporter()
-  ));
+  //.pipe(gulpif(_release,
+    //scsslint.failReporter()
+  //));
 });

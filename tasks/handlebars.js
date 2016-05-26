@@ -1,13 +1,13 @@
 'use strict';
 
-var path		        	= require('path');
-var gulp      		  	= require('gulp');
-var config	     	   	= require('./config.json');
-var data	       	   	= require('gulp-data');
-var handlebars	     	= require('gulp-compile-handlebars');
-var handlebarsIntl  	= require('handlebars-intl');
-var removeEmptyLines	= require('gulp-remove-empty-lines');
-var rename		       	= require('gulp-rename');
+var path              = require('path');
+var gulp              = require('gulp');
+var config            = require('./config.json');
+var data              = require('gulp-data');
+var handlebars        = require('gulp-compile-handlebars');
+var handlebarsIntl    = require('handlebars-intl');
+var removeEmptyLines  = require('gulp-remove-empty-lines');
+var rename            = require('gulp-rename');
 
 
 // Register HandlebarsIntl helper in Handlebars module
@@ -17,7 +17,7 @@ handlebarsIntl.registerWith(handlebars.Handlebars);
 handlebars.Handlebars.registerHelper('toJson', JSON.stringify);
 
 // Handlebars custom context
-var contextPath	= path.resolve(config.handlebars.context);
+var contextPath = path.resolve(config.handlebars.context);
 
 // Compile handlebars templates
 gulp.task('handlebars', function handlebarsfn() {

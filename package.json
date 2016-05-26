@@ -46,6 +46,8 @@
     "yargs": "^3.31.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4",
     "lodash": "^4.12.0"
   }
 }

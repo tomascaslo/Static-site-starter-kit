@@ -1,9 +1,9 @@
 'use strict';
 
-var gulp					= require('gulp');
-var config				= require('./config.json');
-var browserSync		= require('browser-sync').create();
-var gulpSequence	= require('gulp-sequence');
+var gulp          = require('gulp');
+var config        = require('./config.json');
+var browserSync   = require('browser-sync').create();
+var gulpSequence  = require('gulp-sequence');
 
 // Start static server
 gulp.task('watch', function watch() {
@@ -34,7 +34,7 @@ gulp.task('watch', function watch() {
       config.handlebars.partials + '/**/*.hbs',
       config.handlebars.context
     ), function watchHbs() {
-    gulpSequence('handlebars', browserSync.reload);
+    gulpSequence('handlebars', 'inject', browserSync.reload);
   });
 
   // Watch images

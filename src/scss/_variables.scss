@@ -1,0 +1,54 @@
+/*
+ * Variables
+ */
+
+// Colors
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$tertiary-color: #000000;
+$text-color: #ffffff;
+$text-color-secondary: #000000;
+$background-color: #ffffff;
+
+// Media queries
+$tablet-width: 768px;
+$desktop-width: 992px;
+
+@mixin mobile {
+	@media (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin mobile-tablet {
+	@media (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+@mixin desktop-tablet {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+// Transitions
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
